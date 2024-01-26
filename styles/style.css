@@ -155,19 +155,19 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 51px;
+  gap: 49px;
   width: clamp(375px, 49vw, 700px);
   margin: auto;
   background-color: var(--background-color);
 }
 
-.section {
+.card {
   display: flex;
   flex-direction: column;
   border: 2px solid var(--accent-color, #000);
 }
 
-.section__title {
+.card__title {
   font-size: 18px;
   /* font-weight: var(--header-weight); */
   font-variation-settings: "wght" var(--header-weight);
@@ -175,13 +175,13 @@
   border-bottom: 2px solid var(--accent-color, #000);
 }
 
-.section__image-container {
+.card__image-container {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.section__image {
+.card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -189,34 +189,34 @@
   border-bottom: 2px solid var(--accent-color, #000);
 }
 
-.section__image.filter1 {
+.card__image.filter1 {
   filter: sepia(80%);
 }
 
-.section__image.filter2 {
+.card__image.filter2 {
   filter: saturate(180%);
 }
 
-.section__image.filter3 {
+.card__image.filter3 {
   filter: brightness(180%);
 }
 
-.section__image.filter4 {
+.card__image.filter4 {
   filter: invert(0.7);
 }
 
-.section__image.filter5 {
+.card__image.filter5 {
   filter: grayscale(0.8);
 }
 
-.section__image.filter6 {
+.card__image.filter6 {
   filter: blur(0.6rem);
 }
-.section__image.filter7 {
+.card__image.filter7 {
   filter: hue-rotate(90deg) brightness(60%);
 }
 
-.section__image-watermark {
+.card__image-watermark {
   position: absolute;
   right: 25px;
   top: 21px;
@@ -232,25 +232,27 @@
 }
 
 @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
-  .section__image-watermark {
+  .card__image-watermark {
       -webkit-text-stroke: 1px var(--background-color);
       text-stroke: 1px var(--background-color);
       text-shadow: none;
   }
 } 
 
-.section__article {
+.card__article {
   margin: 25px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  /* gap: 26px; */
 }
 
-.section__text {
+.card__text + .card__text {
   /* padding-right: 20px; */
+  margin-top: 27px;
 }
 
-.section-footer {
+.card-footer {
+  margin-top: 25px;
   display: inline-flex;
   align-self: flex-end;
   gap: 5px;
@@ -422,6 +424,8 @@
 }
 
 .dialog {
+  background-color: var(--background-color);
+  color: var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
@@ -457,6 +461,9 @@
 }
 
 @media (width <= 375px) {
+  .card__image-watermark {
+    right: 11px;
+  }
   .footer__save-button .button__text {
     display: flex;
     flex-wrap: wrap;
