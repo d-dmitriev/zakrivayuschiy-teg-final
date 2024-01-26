@@ -12,3 +12,49 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.animate-button {
+  position: relative;
+}
+
+.animate-button::after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-color: var(--aimated-color);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  mix-blend-mode: difference;
+}
+
+.animate-button:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes arrow_move {
+  from {
+    transform: translateX(-3px);
+  }
+  to {
+    transform: translateX(1px);
+  }
+}
+
+@keyframes like-scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes sparks-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
