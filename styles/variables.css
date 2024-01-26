@@ -14,4 +14,5 @@
     --gradient-color: #d3d3d3;
     --gradient-color2: #e7e7e7;
     --gradient-color3: #1a1a1a;
+    --aimated-color: var(--background-color);
 }

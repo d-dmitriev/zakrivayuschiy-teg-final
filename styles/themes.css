@@ -12,6 +12,7 @@ body.theme-dark {
   --gradient-color: #000;
   --gradient-color2: #007f0c;
   --gradient-color3: #004306;
+  --aimated-color: var(--accent-color);
 }
 
 body.theme-light {
@@ -22,7 +23,7 @@ body.theme-light {
   --gradient-color: #d3d3d3;
   --gradient-color2: #e7e7e7;
   --gradient-color3: #1a1a1a;
-
+  --aimated-color: var(--background-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +35,7 @@ body.theme-light {
     --gradient-color: #000;
     --gradient-color2: #007f0c;
     --gradient-color3: #004306;
+    --aimated-color: var(--accent-color);
   }
 }
 
@@ -46,5 +48,6 @@ body.theme-light {
     --gradient-color: #d3d3d3;
     --gradient-color2: #e7e7e7;
     --gradient-color3: #1a1a1a;
+    --aimated-color: var(--background-color);
   }
 }

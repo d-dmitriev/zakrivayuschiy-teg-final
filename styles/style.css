@@ -356,14 +356,15 @@
   position: relative;
 }
 
-.animate-button::before {
+.animate-button::after {
   position: absolute;
   content: '';
   inset: 0;
-  background-color: var(--accent-color);
+  background-color: var(--aimated-color);
   transition: transform 0.5s ease-in-out;
   transform-origin: 0 0;
   transform: scaleX(0);
+  mix-blend-mode: difference;
 }
 
 .card__like-button:focus {
@@ -371,18 +372,19 @@
   box-shadow: 2px 2px var(--accent-color);
 }
 
-.animate-button:hover::before {
+.animate-button:hover::after {
   transform: scaleX(1);
 }
 
 .button__text {
   position: relative;
-  transition: color 1s;
+  /* color: var(--accent-color); */
+  /* transition: color 1s; */
 }
 
 .animate-button:hover .button__text {
-  color: var(--background-color);
-  z-index: 2;
+  /* color: var(--background-color);
+  z-index: 2; */
 }
 
 .footer {
