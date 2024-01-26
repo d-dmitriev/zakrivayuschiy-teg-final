@@ -6,7 +6,7 @@
 */
 body.theme-dark {
   --background-color: #000;
-  --accent-color: #00CC14;
+  --accent-color: #00cc14;
   --main-text-weight: 465;
   --header-weight: 785;
   --gradient-color: #000;
@@ -29,7 +29,7 @@ body.theme-light {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000;
-    --accent-color: #00CC14;
+    --accent-color: #00cc14;
     --main-text-weight: 465;
     --header-weight: 785;
     --gradient-color: #000;
