@@ -29,7 +29,6 @@
     repeating-linear-gradient(to top, var(--gradient-color), var(--gradient-color) 2px, transparent 2px, transparent 4px),
     linear-gradient(to bottom, var(--gradient-color2) 0.01%, var(--gradient-color3));
   background-size: cover;
-    /* repeating-linear-gradient(to top, var(--gradient-color2), var(--gradient-color2) 2px, var(--gradient-color3) 2px, var(--gradient-color3) 4px); */
 }
 
 .page::after {
@@ -194,11 +193,11 @@
 }
 
 .card__image.filter2 {
-  filter: saturate(180%);
+  filter: saturate(300%);
 }
 
 .card__image.filter3 {
-  filter: brightness(180%);
+  filter: brightness(80%);
 }
 
 .card__image.filter4 {
@@ -239,19 +238,17 @@
   }
 } 
 
-.card__article {
+.card__container {
   margin: 25px;
   display: flex;
   flex-direction: column;
-  /* gap: 26px; */
 }
 
 .card__text + .card__text {
-  /* padding-right: 20px; */
   margin-top: 27px;
 }
 
-.card-footer {
+.card__footer {
   margin-top: 25px;
   display: inline-flex;
   align-self: flex-end;
